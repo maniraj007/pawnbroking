@@ -12,25 +12,25 @@ jobs:
       COMPOSE_DOCKER_CLI_BUILD: '1'
       GIT_LFS_SKIP_SMUDGE: '1'
     steps:
-    # - name: Login to GitHub Container Registry
-    #   uses: docker/login-action@v1
-    #   with:
-    #     registry: 
-    #     username: ${{ github.repository_owner }}
-    #     password: ${{ secrets.GITHUB_TOKEN }}
-    #     logout: true
-    - name: zsh install
-      run:  |
-        sudo apt-get update && sudo apt-get install -y zsh
-    - name: git lfs install
-      run:  |
-        curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
-        sudo apt-get install -y git-lfs
-        git lfs install
+#     - name: Login to GitHub Container Registry
+#       uses: docker/login-action@v1
+#       with:
+#         registry: 
+#         username: ${{ github.repository_owner }}
+#         password: ${{ secrets.GITHUB_TOKEN }}
+#         logout: true
+#     - name: zsh install
+#       run:  |
+#         sudo apt-get update && sudo apt-get install -y zsh
+#     - name: git lfs install
+#       run:  |
+#         curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+#         sudo apt-get install -y git-lfs
+#         git lfs install
     - name: Checkout
       uses: actions/checkout@v2
-    - name: git lfs pull
-      run:  git lfs pull  
+#     - name: git lfs pull
+#       run:  git lfs pull  
     - name: Unit Tests
       run: |
         ./run.sh
