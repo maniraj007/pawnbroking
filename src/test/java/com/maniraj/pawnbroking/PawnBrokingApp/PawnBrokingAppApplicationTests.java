@@ -8,6 +8,7 @@ class PawnBrokingAppApplicationTests {
 
 	@Test
 	void contextLoads() {
+		//
 	}
 
 }
