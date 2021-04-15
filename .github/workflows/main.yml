@@ -33,4 +33,5 @@ jobs:
 #       run:  git lfs pull  
     - name: Unit Tests
       run: |
+       chmod +x run.sh
         ./run.sh
