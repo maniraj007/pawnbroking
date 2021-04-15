@@ -1,5 +1,5 @@
 FROM ubuntu
 
-RUN apt-get install -y zsh
+RUN apt-get update
 
 CMD echo $DOCKER_BUILDKIT $COMPOSE_DOCKER_CLI_BUILD
