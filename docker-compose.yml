@@ -5,5 +5,5 @@ services:
         build:
             context: ./DockerImageTest
             cache_from: 
-                -  "ghcr.io/maniraj007/test-docker:1.0.0"
-        image: "ghcr.io/maniraj007/test-docker:1.0.0"
+                -  "ghcr.io/maniraj007/test-docker"
+        image: "ghcr.io/maniraj007/test-docker"
