@@ -1,7 +1,5 @@
 on:
   push:
-    paths-ignore:
-      - '.github/workflows/*'
 
 jobs:
   unit_test:
