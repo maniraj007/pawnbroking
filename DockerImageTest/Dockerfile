@@ -2,4 +2,4 @@ FROM ubuntu
 
 RUN apt-get update
 
-CMD echo $DOCKER_BUILDKIT $COMPOSE_DOCKER_CLI_BUILD
+CMD echo "Hello World"
