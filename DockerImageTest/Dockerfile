@@ -1,13 +1,5 @@
-FROM busybox
+FROM debian:buster-slim
 
-RUN busybox echo "123" | grep "123"
-
-RUN busybox echo "124" | grep "124"
-
-RUN busybox echo "123" | grep "123"
-
-RUN busybox echo "123" | grep "123"
-
-RUN busybox echo "123" | grep "123"
+sudo apt-get install zsh -y
 
 CMD ["echo" "Hello World!"]
