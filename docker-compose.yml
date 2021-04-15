@@ -1,9 +1,9 @@
-version: '3.2'
+version: '3.8'
 
 services:
     service1:
-#         build:
-#             context: ./DockerImageTest
-#             cache_from: 
-#                 -  "ghcr.io/maniraj007/test-docker"
+        build:
+            context: ./DockerImageTest
+            cache_from: 
+                -  "ghcr.io/maniraj007/test-docker"
         image: "ghcr.io/maniraj007/test-docker:1.0.0"
