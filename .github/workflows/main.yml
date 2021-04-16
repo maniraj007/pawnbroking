@@ -34,3 +34,6 @@ jobs:
       run: |
        chmod +x run.sh
         ./run.sh
+    - name: Docker Layer Caching
+      uses: satackey/action-docker-layer-caching@v0.0.11
+
