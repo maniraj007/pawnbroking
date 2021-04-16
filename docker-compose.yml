@@ -3,7 +3,7 @@ version: '3.8'
 services:
     service1:
         build:
-#             context: ./DockerImageTest
+            context: ./DockerImageTest
 #             cache_from: 
 #                 -  "ghcr.io/maniraj007/test-docker:latest"
 #         image: "ghcr.io/maniraj007/test-docker:latest"
