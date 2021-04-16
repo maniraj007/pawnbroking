@@ -6,7 +6,7 @@ jobs:
     name: Unit Tests
     runs-on: ubuntu-18.04
     env:
-#       DOCKER_BUILDKIT: 1
+      DOCKER_BUILDKIT: 1
       COMPOSE_DOCKER_CLI_BUILD: 1
       GIT_LFS_SKIP_SMUDGE: 1
 #       BUILDKIT_INLINE_CACHE: '1'
