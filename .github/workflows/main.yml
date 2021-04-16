@@ -18,6 +18,8 @@ jobs:
         username: ${{ github.repository_owner }}
         password: ${{ secrets.GITHUB_TOKEN }}
         logout: true
+    - name: Docker Layer Caching
+      uses: satackey/action-docker-layer-caching@v0.0.11
 #     - name: zsh install
 #       run:  |
 #         sudo apt-get update && sudo apt-get install -y zsh
@@ -34,6 +36,4 @@ jobs:
       run: |
        chmod +x run.sh
         ./run.sh
-    - name: Docker Layer Caching
-      uses: satackey/action-docker-layer-caching@v0.0.11
 
