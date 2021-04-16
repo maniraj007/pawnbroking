@@ -6,7 +6,7 @@ jobs:
     name: Unit Tests
     runs-on: ubuntu-18.04
     env:
-#       DOCKER_BUILDKIT: 1
+      DOCKER_BUILDKIT: 1
       COMPOSE_DOCKER_CLI_BUILD: 1
       GIT_LFS_SKIP_SMUDGE: 1
 #       BUILDKIT_INLINE_CACHE: '1'
@@ -18,8 +18,8 @@ jobs:
         username: ${{ github.repository_owner }}
         password: ${{ secrets.GITHUB_TOKEN }}
         logout: true
-    - name: Docker Layer Caching
-      uses: satackey/action-docker-layer-caching@v0.0.11
+#     - name: Docker Layer Caching
+#       uses: satackey/action-docker-layer-caching@v0.0.11
 #     - name: zsh install
 #       run:  |
 #         sudo apt-get update && sudo apt-get install -y zsh
