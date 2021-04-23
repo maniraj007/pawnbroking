@@ -8,8 +8,7 @@ jobs:
     env:
       DOCKER_BUILDKIT: 1
       COMPOSE_DOCKER_CLI_BUILD: 1
-      GIT_LFS_SKIP_SMUDGE: 1
-#       BUILDKIT_INLINE_CACHE: '1'
+      BUILDKIT_INLINE_CACHE: 1
     steps:
     - name: Login to GitHub Container Registry
       uses: docker/login-action@v1
@@ -18,20 +17,8 @@ jobs:
         username: ${{ github.repository_owner }}
         password: ${{ secrets.CR_PAT1 }}
         logout: true
-#     - name: Docker Layer Caching
-#       uses: satackey/action-docker-layer-caching@v0.0.11
-#     - name: zsh install
-#       run:  |
-#         sudo apt-get update && sudo apt-get install -y zsh
-#     - name: git lfs install
-#       run:  |
-#         curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
-#         sudo apt-get install -y git-lfs
-#         git lfs install
     - name: Checkout
       uses: actions/checkout@v2
-#     - name: git lfs pull
-#       run:  git lfs pull  
     - name: Unit Tests
       run: |
        chmod +x run.sh
