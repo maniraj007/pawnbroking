@@ -4,7 +4,7 @@ on:
 jobs:
   unit_test:
     name: Unit Tests
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     env:
       DOCKER_BUILDKIT: 1
       COMPOSE_DOCKER_CLI_BUILD: 1
