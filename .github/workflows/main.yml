@@ -16,7 +16,7 @@ jobs:
       with:
         registry: ghcr.io
         username: ${{ github.repository_owner }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+        password: ${{ secrets.CR_PAT }}
         logout: true
 #     - name: Docker Layer Caching
 #       uses: satackey/action-docker-layer-caching@v0.0.11
