@@ -23,4 +23,8 @@ jobs:
       run: |
        chmod +x run.sh
         ./run.sh
+    - name: API Tests
+      run: |
+       chmod +x run.sh
+        ./run.sh
 
