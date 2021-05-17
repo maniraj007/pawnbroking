@@ -4,6 +4,7 @@ on:
       - master
       - stage
       - prod
+    pull_request:
 
 jobs:
   unit_test:
