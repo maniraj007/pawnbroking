@@ -23,7 +23,6 @@ jobs:
         ./run.sh
     - name: API Tests
       run: |
-       chmod +x run.sh
-        ./run.sh
-      if: ${{ github.ref == 'refs/heads/master' }}
+       echo ${{ github.head_ref }}
+      # if: ${{ github.ref == 'refs/heads/master' }}
 
