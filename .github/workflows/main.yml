@@ -4,6 +4,7 @@ on:
       - master
       - stage
       - prod
+    pull_request:
 
 jobs:
   unit_test:
@@ -24,4 +25,5 @@ jobs:
       run: |
        chmod +x run.sh
         ./run.sh
+      if: ${{ github.ref == 'refs/heads/master' }}
 
