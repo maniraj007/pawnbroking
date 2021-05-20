@@ -7,9 +7,11 @@ on:
   pull_request:
 
 jobs:
-  unit_test:
-    name: Unit Tests
+  env1:
+    name: ENV1
     runs-on: ubuntu-latest
+    environment:
+      name: test
     env:
       DOCKER_BUILDKIT: 1
       COMPOSE_DOCKER_CLI_BUILD: 1
@@ -17,12 +19,23 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Unit Tests
+    - name: ENV1
       run: |
-       chmod +x run.sh
         ./run.sh
-    - name: API Tests
+
+  env2:
+    name: ENV2
+    runs-on: ubuntu-latest
+    environment:
+      name: env2
+    env:
+      DOCKER_BUILDKIT: 1
+      COMPOSE_DOCKER_CLI_BUILD: 1
+#       BUILDKIT_INLINE_CACHE: 1
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: ENV2
       run: |
-       echo ${{ github.head_ref }}
-      # if: ${{ github.ref == 'refs/heads/master' }}
+        ./run.sh
 
