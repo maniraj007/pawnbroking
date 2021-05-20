@@ -17,12 +17,12 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Unit Tests
+    - name: ENV1
       run: |
-       chmod +x run.sh
         ./run.sh
-    - name: API Tests
+      environment: test
+    - name: ENV2
+      environment: ENV2
       run: |
-       echo ${{ github.head_ref }}
-      # if: ${{ github.ref == 'refs/heads/master' }}
+        ./run.sh
 
