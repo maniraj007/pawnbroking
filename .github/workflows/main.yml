@@ -36,7 +36,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: ENV2
-      environment: ENV2
       run: |
         ./run.sh
 
